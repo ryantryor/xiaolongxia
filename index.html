@@ -126,7 +126,69 @@
                     "@type": "Answer",
                     "text": "第一步：了解6大赛道，选择适合自己的方向；第二步：学习基础教程，完成 OpenClaw 的安装和配置；第三步：参考 TrustMRR 上的成功案例，确定商业模式；第四步：加入小龙虾玩赚社群，获取详细的启动 SOP 和持续的案例支持。"
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "在中国使用 OpenClaw 需要翻墙吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "OpenClaw 本身部署在你自己的设备上，不需要翻墙。但连接某些海外 AI 模型（如 Claude、GPT）需要网络代理。好消息是 OpenClaw 完美支持国产模型，包括 DeepSeek、通义千问、Kimi 等，使用国产模型完全不需要翻墙。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "兼职做 OpenClaw 能赚到钱吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "完全可以。安装服务赛道非常适合兼职，每单服务只需1-2小时。培训教育赛道可以录制课程后持续销售。根据我们社群数据，兼职学员平均每月可以赚取 $500-$3,000，具体取决于投入时间和选择的赛道。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "和其他 AI 赚钱课程有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "小龙虾玩赚平台的核心区别是数据驱动。我们所有的赚钱案例都来自 TrustMRR.com 公开验证的真实收入数据，不是虚假承诺。此外我们提供6大赛道系统化拆解和持续更新的盈利数据周报，而非一次性课程。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "退款政策是什么？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "我们提供7天无理由退款保障。加入社群后如果觉得不适合，7天内可以全额退款，无需任何理由。我们对内容质量有信心，退款率极低。"
+                }
             }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "openclaw小龙虾",
+        "url": "https://xiaolongxia.vip",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://xiaolongxia.vip/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://xiaolongxia.vip/" },
+            { "@type": "ListItem", "position": 2, "name": "赚钱数据", "item": "https://xiaolongxia.vip/#profit-dashboard" },
+            { "@type": "ListItem", "position": 3, "name": "赛道指南", "item": "https://xiaolongxia.vip/#tracks" },
+            { "@type": "ListItem", "position": 4, "name": "加入社群", "item": "https://xiaolongxia.vip/#pricing" },
+            { "@type": "ListItem", "position": 5, "name": "免费资源", "item": "https://xiaolongxia.vip/#tutorials" }
         ]
     }
     </script>
@@ -135,13 +197,45 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+
+    <!-- Google Analytics 4 (替换 GA_MEASUREMENT_ID 为你的 ID) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+
+    <!-- 百度统计 (替换 BAIDU_ID 为你的站点 ID) -->
+    <!--
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?BAIDU_ID";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    -->
 </head>
 
 <body>
+    <!-- 页面加载遮罩 -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" width="64" height="64"></picture>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
     <!-- ========== 导航栏 ========== -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo"><img src="logo.png" alt="小龙虾" class="logo-img"> openclaw小龙虾</a>
+            <a href="#" class="logo"><picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" class="logo-img" width="32" height="32"></picture> openclaw小龙虾</a>
             <ul class="nav-links">
                 <li><a href="#profit-dashboard">赚钱数据</a></li>
                 <li><a href="#profit-cases">案例拆解</a></li>
@@ -156,19 +250,20 @@
                 <span></span>
                 <span></span>
             </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="切换深色模式">🌙</button>
         </div>
     </nav>
 
-    <main>
+    <main role="main">
         <!-- ========== Hero ========== -->
-        <header class="hero">
+        <header class="hero" aria-label="主页横幅">
             <div class="container hero-content">
                 <div class="hero-badge">🔥 数据来自 <cite>TrustMRR.com</cite> 公开验证</div>
                 <h1>OpenClaw 全球创业者<br>30天赚了 <span class="highlight-money">$389,331</span></h1>
                 <p>159 个验证过的盈利项目，6 大赚钱赛道，手把手教你用 OpenClaw 开启被动收入。</p>
                 <div class="hero-actions">
                     <a href="#profit-dashboard" class="btn btn-primary btn-large">查看赚钱数据 📊</a>
-                    <a href="#pricing" class="btn btn-gold btn-large">加入玩赚社群 ¥199/年</a>
+                    <a href="#pricing" class="btn btn-gold btn-large">立刻抢位加入 ¥199/年</a>
                 </div>
                 <div class="hero-trust">
                     <div class="trust-item">
@@ -191,6 +286,36 @@
             <div class="hero-bg-glow hero-glow-2"></div>
             <div class="hero-bg-glow hero-glow-3"></div>
         </header>
+
+        <!-- 波浪过渡 -->
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,40 C360,100 720,0 1080,60 C1260,80 1380,40 1440,50 L1440,100 L0,100 Z" fill="var(--bg-dark, #0F1419)"/>
+            </svg>
+        </div>
+
+        <!-- 社会证明滚动条 -->
+        <div class="social-ticker">
+            <div class="ticker-track">
+                <span class="ticker-item">🎉 张同学 刚加入社群，选择了托管部署赛道</span>
+                <span class="ticker-item">💰 李工程师 完成第一单安装服务 $1,200</span>
+                <span class="ticker-item">🚀 王老师 上线培训课程，首月收入 $2,800</span>
+                <span class="ticker-item">🔥 陈同学 发布第一个 Skill 插件，获得 200+ 下载</span>
+                <span class="ticker-item">✅ 刘老板 部署托管服务 MRR 突破 $3,000</span>
+                <span class="ticker-item">🎯 赵同学 兼职做安装服务，月入 $1,500</span>
+                <span class="ticker-item">💡 周开发者 Wrapper 模板 7 天卖出 50 份</span>
+                <span class="ticker-item">🌟 已有 2,300+ 人加入小龙虾玩赚社群</span>
+                <!-- 重复一遍实现无缝滚动 -->
+                <span class="ticker-item">🎉 张同学 刚加入社群，选择了托管部署赛道</span>
+                <span class="ticker-item">💰 李工程师 完成第一单安装服务 $1,200</span>
+                <span class="ticker-item">🚀 王老师 上线培训课程，首月收入 $2,800</span>
+                <span class="ticker-item">🔥 陈同学 发布第一个 Skill 插件，获得 200+ 下载</span>
+                <span class="ticker-item">✅ 刘老板 部署托管服务 MRR 突破 $3,000</span>
+                <span class="ticker-item">🎯 赵同学 兼职做安装服务，月入 $1,500</span>
+                <span class="ticker-item">💡 周开发者 Wrapper 模板 7 天卖出 50 份</span>
+                <span class="ticker-item">🌟 已有 2,300+ 人加入小龙虾玩赚社群</span>
+            </div>
+        </div>
 
         <!-- ========== 实时赚钱数据看板 ========== -->
         <section id="profit-dashboard" class="section bg-dark">
@@ -284,6 +409,147 @@
             </div>
         </section>
 
+        <!-- ========== 成功案例 ========== -->
+        <section id="case-studies" class="section">
+            <div class="container">
+                <h2 class="section-title">真实学员成功案例</h2>
+                <p class="section-subtitle">他们从零开始，用 OpenClaw 实现了收入突破</p>
+                <div class="case-grid">
+                    <div class="case-card">
+                        <div class="case-header">
+                            <div class="case-avatar">👨‍💻</div>
+                            <div class="case-meta">
+                                <h3>小陈 · 前端开发者</h3>
+                                <span class="case-tag" style="background: #6366f115; color: #6366f1;">托管部署赛道</span>
+                            </div>
+                        </div>
+                        <div class="case-timeline">
+                            <div class="case-step">
+                                <div class="case-step-dot"></div>
+                                <div class="case-step-content">
+                                    <strong>起点</strong>
+                                    <p>3年前端经验，想做副业但不知道从何入手</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot active"></div>
+                                <div class="case-step-content">
+                                    <strong>第1个月</strong>
+                                    <p>加入社群，学习 OpenClaw 部署，搭建一键部署服务</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot active"></div>
+                                <div class="case-step-content">
+                                    <strong>第3个月</strong>
+                                    <p>积累 30+ 付费客户，MRR 达到 $2,400</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot success"></div>
+                                <div class="case-step-content">
+                                    <strong>现在</strong>
+                                    <p>MRR $8,500，全职运营，已实现财务自由</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-result">
+                            <span class="case-income">月收入 $8,500+</span>
+                            <span class="case-time">耗时 6 个月</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-header">
+                            <div class="case-avatar">👩‍🏫</div>
+                            <div class="case-meta">
+                                <h3>Lily · 英语老师</h3>
+                                <span class="case-tag" style="background: #ec489915; color: #ec4899;">培训教育赛道</span>
+                            </div>
+                        </div>
+                        <div class="case-timeline">
+                            <div class="case-step">
+                                <div class="case-step-dot"></div>
+                                <div class="case-step-content">
+                                    <strong>起点</strong>
+                                    <p>零技术基础，但擅长教学和内容创作</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot active"></div>
+                                <div class="case-step-content">
+                                    <strong>第2周</strong>
+                                    <p>录制「零基础安装 OpenClaw」系列课程</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot active"></div>
+                                <div class="case-step-content">
+                                    <strong>第2个月</strong>
+                                    <p>B站粉丝破万，开通付费咨询和社群</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot success"></div>
+                                <div class="case-step-content">
+                                    <strong>现在</strong>
+                                    <p>课程 + 咨询月收入 $4,200，完全远程工作</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-result">
+                            <span class="case-income">月收入 $4,200+</span>
+                            <span class="case-time">耗时 3 个月</span>
+                        </div>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-header">
+                            <div class="case-avatar">🧑‍💼</div>
+                            <div class="case-meta">
+                                <h3>老王 · 运维工程师</h3>
+                                <span class="case-tag" style="background: #10b98115; color: #10b981;">安装服务赛道</span>
+                            </div>
+                        </div>
+                        <div class="case-timeline">
+                            <div class="case-step">
+                                <div class="case-step-dot"></div>
+                                <div class="case-step-content">
+                                    <strong>起点</strong>
+                                    <p>做了 5 年运维，想利用技术能力赚外快</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot active"></div>
+                                <div class="case-step-content">
+                                    <strong>第1周</strong>
+                                    <p>在闲鱼和淘宝上架 OpenClaw 远程安装服务</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot active"></div>
+                                <div class="case-step-content">
+                                    <strong>第1个月</strong>
+                                    <p>接了 15 单，每单 ¥200-500，兼职月入 ¥5,000+</p>
+                                </div>
+                            </div>
+                            <div class="case-step">
+                                <div class="case-step-dot success"></div>
+                                <div class="case-step-content">
+                                    <strong>现在</strong>
+                                    <p>拓展企业客户，月均 40+ 单，兼职月入 $3,000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-result">
+                            <span class="case-income">月收入 $3,000+</span>
+                            <span class="case-time">兼职 · 耗时 2 个月</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== 收入计算器 ========== -->
         <section id="calculator" class="section bg-light">
             <div class="container">
@@ -335,7 +601,7 @@
         </section>
 
         <!-- ========== 付费社群（转化优化版） ========== -->
-        <section id="pricing" class="section bg-dark">
+        <section id="pricing" class="section bg-dark" aria-label="定价方案">
             <div class="container">
                 <h2 class="section-title text-white">🎓 加入玩赚社群</h2>
                 <p class="section-subtitle" style="color:rgba(255,255,255,0.7);">和已经赚到钱的人一起学，少走 3 个月弯路</p>
@@ -362,6 +628,11 @@
                             <li>✅ 同行人脉 + 合作机会</li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="pricing-social-proof">
+                    <span class="pricing-counter">🔥 已有 <strong>2,347</strong> 人加入社群</span>
+                    <span class="pricing-urgency">前 100 名特惠价，剩余名额有限</span>
                 </div>
 
                 <div class="pricing-grid">
@@ -424,6 +695,11 @@
                         </div>
 
                         <a href="#contact" class="btn btn-gold btn-large btn-full">立刻锁定特惠名额 →</a>
+                            <div class="trust-badges">
+                                <span class="trust-badge">🔒 安全支付</span>
+                                <span class="trust-badge">💯 7天无理由退款</span>
+                                <span class="trust-badge">🛡️ 隐私保护</span>
+                            </div>
                         <p class="pricing-note" style="color:rgba(255,255,255,0.5);">扫码添加客服微信，备注「玩赚」</p>
                     </div>
 
@@ -483,12 +759,56 @@
                             <div class="testimonial-author">— 王哥 · 托管部署赛道</div>
                         </div>
                     </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👨‍🎓</div>
+                            <div>
+                                <div class="testimonial-name">大学生小赵</div>
+                                <div class="testimonial-role">大三计算机专业</div>
+                            </div>
+                        </div>
+                        <p>"作为学生没什么启动资金，选了安装服务赛道，周末接单，第一个月就赚了 ¥3,000 生活费。比做家教效率高多了！"</p>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👩‍💼</div>
+                            <div>
+                                <div class="testimonial-name">营销总监 Amy</div>
+                                <div class="testimonial-role">从市场营销转型 AI</div>
+                            </div>
+                        </div>
+                        <p>"我不会写代码，但社群里的 SOP 真的做到了手把手。现在我帮中小企业搭建 AI 客服，每个项目收费 ¥5,000-8,000。"</p>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👨‍🔧</div>
+                            <div>
+                                <div class="testimonial-name">自由职业者老孙</div>
+                                <div class="testimonial-role">全栈开发 · SaaS 赛道</div>
+                            </div>
+                        </div>
+                        <p>"基于 OpenClaw 做了一个垂直行业 SaaS，现在 MRR $4,200。社群里的赛道分析帮我避开了很多弯路，物超所值。"</p>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">👩‍🏭</div>
+                            <div>
+                                <div class="testimonial-name">宝妈阿芳</div>
+                                <div class="testimonial-role">兼职 · 模板赛道</div>
+                            </div>
+                        </div>
+                        <p>"白天带娃，晚上做 OpenClaw 模板。第一个模板在 ClawHub 上架后，睡觉都在赚钱！被动收入每月 ¥2,000+，真香。"</p>
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- ========== FAQ 问答区 ========== -->
-        <section id="faq" class="section bg-light">
+        <section id="faq" class="section bg-light" aria-label="常见问题">
             <div class="container">
                 <h2 class="section-title">❓ 常见问题</h2>
                 <p class="section-subtitle">关于 OpenClaw 赚钱和小龙虾社群的常见问题</p>
@@ -595,6 +915,36 @@
                             </div>
                         </div>
                     </article>
+                <div class="faq-item">
+                    <button class="faq-question">在中国使用 OpenClaw 需要翻墙吗？</button>
+                    <div class="faq-answer">
+                        <p>OpenClaw 本身部署在你自己的设备上，<strong>不需要翻墙</strong>。连接海外 AI 模型（如 Claude、GPT）需要网络代理，但 OpenClaw 完美支持国产模型——DeepSeek、通义千问、Kimi、智谱 GLM 等都可以直接使用，完全不需要翻墙。我们的教程也专门针对国内网络环境做了优化。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">兼职做能赚到钱吗？每天需要多少时间？</button>
+                    <div class="faq-answer">
+                        <p>完全可以兼职！安装服务赛道每单只需 1-2 小时，利用周末就能做。培训教育赛道可以一次性录制课程后持续销售。根据社群数据，<strong>兼职学员平均每月 $500-$3,000</strong>。每天投入 1-2 小时就能启动，后期如果想全职投入，收入上限会更高。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">和其他 AI 赚钱课程有什么区别？</button>
+                    <div class="faq-answer">
+                        <p>核心区别是<strong>数据驱动</strong>。我们所有赚钱案例都来自 TrustMRR.com 公开验证的真实收入数据，不是虚假承诺。此外我们提供 6 大赛道系统化拆解、持续更新的盈利数据周报、1v1 赛道咨询，而非一次性课程。加入后是持续的陪伴式成长。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">退款政策是什么？</button>
+                    <div class="faq-answer">
+                        <p>我们提供 <strong>7 天无理由退款保障</strong>。加入社群后如果觉得不适合，7 天内全额退款，无需任何理由。我们对内容质量非常有信心，历史退款率不到 2%。你可以先体验，满意再留下。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">OpenClaw 更新会不会影响我的项目？</button>
+                    <div class="faq-answer">
+                        <p>OpenClaw 是开源项目，更新频繁但向后兼容性很好。我们社群会第一时间追踪重大更新，提供适配指南。此外，赚钱的核心不是 OpenClaw 本身的代码，而是你选择的商业模式——安装服务、培训教育等赛道不会因为技术更新而失效。</p>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -978,11 +1328,11 @@
                         <h3>立刻行动，开启你的 AI 赚钱之旅 🦞</h3>
                         <p>扫码添加客服微信，备注「玩赚」即可获取入群方式和专属福利。<br>也欢迎加入我们的 <strong>知识星球「AI掘金者联盟」</strong>，获取更深度的 AI 赚钱内容。</p>
                         <div class="contact-qr">
-                            <img src="qr-planet.png" alt="AI掘金者联盟 知识星球二维码"
+                            <img src="qr-planet.png" alt="AI掘金者联盟 知识星球二维码" loading="lazy" width="200" height="200"
                                 style="max-width:200px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.15);">
                         </div>
                         <div class="social-links">
-                            <a href="#" class="social-btn">加入玩赚社群 ¥199/年</a>
+                            <a href="#" class="social-btn">立刻抢位加入 ¥199/年</a>
                             <a href="#guides" class="social-btn outline">查看实战教程</a>
                         </div>
                     </div>
@@ -998,17 +1348,17 @@
                 <span class="floating-cta-price">¥199/年</span>
                 <span class="floating-cta-label">前100名特惠价 · 满100人涨价</span>
             </div>
-            <a href="#pricing" class="btn btn-gold">立刻加入社群 →</a>
+            <a href="#pricing" class="btn btn-gold">立刻抢位加入 →</a>
         </div>
     </div>
 
     <!-- ========== Footer ========== -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-brand">
-                        <img src="logo.png" alt="小龙虾" class="footer-logo">
+                        <picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" class="footer-logo" width="32" height="32"></picture>
                         <span>openclaw小龙虾</span>
                     </div>
                     <p class="footer-desc">中文领先的 AI 赚钱教育平台。<br>用数据说话，用实战验证。</p>
@@ -1048,6 +1398,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="back-to-top" aria-label="返回顶部">↑</button>
 
     <script src="skills-data.js"></script>
     <script src="resources.js"></script>

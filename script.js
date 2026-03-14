@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ============================================================
+    // 0. 隐藏页面加载遮罩
+    // ============================================================
+    const pageLoader = document.getElementById('page-loader');
+    if (pageLoader) {
+        pageLoader.classList.add('hidden');
+        setTimeout(() => pageLoader.remove(), 500);
+    }
+
+    // ============================================================
     // 1. 移动端导航菜单
     // ============================================================
     const hamburger = document.getElementById('hamburger');
@@ -526,6 +535,87 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderSkillCards(currentSkillFilter);
             });
         }
+    }
+
+    // ============================================================
+    // 13. 滚动进度条
+    // ============================================================
+    const updateScrollProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        document.querySelector('.navbar').style.setProperty('--scroll-progress', progress + '%');
+    };
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+    // ============================================================
+    // 14. 返回顶部按钮
+    // ============================================================
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // ============================================================
+    // 15. 导航链接高亮当前 section
+    // ============================================================
+    const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = [];
+    navAnchors.forEach(a => {
+        const id = a.getAttribute('href').substring(1);
+        const section = document.getElementById(id);
+        if (section) sections.push({ el: section, link: a });
+    });
+
+    if (sections.length > 0) {
+        const navHighlightObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navAnchors.forEach(a => a.classList.remove('nav-active'));
+                    const match = sections.find(s => s.el === entry.target);
+                    if (match) match.link.classList.add('nav-active');
+                }
+            });
+        }, { threshold: 0.2, rootMargin: '-80px 0px -50% 0px' });
+
+        sections.forEach(s => navHighlightObserver.observe(s.el));
+    }
+
+    // ============================================================
+    // 16. 暗色模式切换
+    // ============================================================
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (themeToggle) themeToggle.textContent = '☀️';
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                themeToggle.textContent = '🌙';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.textContent = '☀️';
+            }
+        });
     }
 
 });
