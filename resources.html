@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源中心 - openclaw小龙虾 | 技能库 + 免费API + 学习资源</title>
+    <meta name="description" content="OpenClaw 热门技能库、免费AI API推荐、55+ 精选学习资源。从工作流自动化到浏览器爬虫，找到最适合你的赚钱工具。">
+    <meta name="keywords"
+        content="openclaw技能库,免费AI API,openclaw教程,AI学习资源,openclaw skills,DeepSeek API,通义千问API,openclaw赚钱工具,AI资源中心">
+    <meta name="author" content="openclaw小龙虾">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xiaolongxia.vip/resources.html">
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta property="og:image" content="https://xiaolongxia.vip/logo.png">
+
+    <!-- Open Graph / 微信分享 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xiaolongxia.vip/resources.html">
+    <meta property="og:title" content="资源中心 - openclaw小龙虾 | 技能库 + 免费API + 学习资源">
+    <meta property="og:description" content="OpenClaw 热门技能库、免费AI API推荐、55+ 精选学习资源。找到最适合你的赚钱工具。">
+    <meta property="og:site_name" content="openclaw小龙虾">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="资源中心 - openclaw小龙虾 | 技能库 + 免费API + 学习资源">
+    <meta name="twitter:description" content="OpenClaw 热门技能库、免费AI API推荐、55+ 精选学习资源。找到最适合你的赚钱工具。">
+
+    <!-- JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://xiaolongxia.vip/" },
+            { "@type": "ListItem", "position": 2, "name": "资源中心", "item": "https://xiaolongxia.vip/resources.html" }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 页面加载遮罩 -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" width="64" height="64"></picture>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" class="logo-img" width="32" height="32"></picture> openclaw小龙虾</a>
+            <ul class="nav-links">
+                <li><a href="cases.html">赚钱案例</a></li>
+                <li><a href="guides.html">学习指南</a></li>
+                <li><a href="resources.html" class="nav-active">资源中心</a></li>
+                <li><a href="services.html">专业服务</a></li>
+                <li><a href="index.html#pricing" class="nav-cta-link">加入社群</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="切换深色模式">🌙</button>
+        </div>
+    </nav>
+
+    <!-- ========== 页面头部 ========== -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="面包屑导航">
+                <a href="index.html">首页</a> <span>/</span> <span>资源中心</span>
+            </nav>
+            <h1>📚 资源中心</h1>
+            <p>热门技能库、免费API推荐、全网精选学习资源</p>
+        </div>
+    </section>
+
+    <!-- ========== 技能库 ========== -->
+    <section id="skills" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">🧩 OpenClaw 热门技能库</h2>
+            <p class="section-subtitle">20+ 精选 Skills，每个都有详细说明、安全评估和赚钱思路 · ClawHub 收录 13,000+ 技能</p>
+            <div class="filter-container" id="skill-filter-container"></div>
+            <div class="skill-grid" id="skill-grid"></div>
+            <div class="section-cta" style="margin-top:40px;">
+                <p class="cta-text">社群成员可获取完整的 Skill 安装教程和变现 SOP</p>
+                <a href="index.html#pricing" class="btn btn-primary">加入社群 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 免费 API 推荐 ========== -->
+    <section id="free-api" class="section">
+        <div class="container">
+            <h2 class="section-title">🔑 免费 AI API 推荐</h2>
+            <p class="section-subtitle">精选 8 大 AI API 平台，新用户均有免费额度 · 搭配 OpenClaw 实现零成本启动</p>
+            <div class="table-responsive">
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>平台</th>
+                            <th>模型</th>
+                            <th>免费额度</th>
+                            <th>特色</th>
+                            <th>链接</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>阿里云百炼</strong></td>
+                            <td>通义千问 Qwen</td>
+                            <td>新用户赠送大量免费Token</td>
+                            <td>🏆 OpenClaw 官方推荐</td>
+                            <td><a href="https://bailian.console.aliyun.com/" target="_blank" rel="noopener">前往 →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>智谱 AI</strong></td>
+                            <td>GLM-4 系列</td>
+                            <td>新用户免费额度</td>
+                            <td>国产模型性价比之王</td>
+                            <td><a href="https://open.bigmodel.cn/" target="_blank" rel="noopener">前往 →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>DeepSeek</strong></td>
+                            <td>DeepSeek-V3/R1</td>
+                            <td>极低价格（¥1/百万 Token）</td>
+                            <td>🔥 最强国产推理模型</td>
+                            <td><a href="https://platform.deepseek.com/" target="_blank" rel="noopener">前往 →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>MiniMax</strong></td>
+                            <td>M2.1 + VLM</td>
+                            <td>免费体验额度</td>
+                            <td>多模态（图片理解）</td>
+                            <td><a href="https://platform.minimax.io/" target="_blank" rel="noopener">前往 →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>月之暗面</strong></td>
+                            <td>Kimi / K2.5</td>
+                            <td>免费额度</td>
+                            <td>超长上下文 128k+</td>
+                            <td><a href="https://platform.moonshot.cn/" target="_blank" rel="noopener">前往 →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google</strong></td>
+                            <td>Gemini 2.5</td>
+                            <td>免费 API Tier</td>
+                            <td>多模态 + 长上下文</td>
+                            <td><a href="https://ai.google.dev/" target="_blank" rel="noopener">前往 →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>OpenAI</strong></td>
+                            <td>GPT-4o / o3</td>
+                            <td>新用户 $5 赠金</td>
+                            <td>最成熟的生态</td>
+                            <td><a href="https://platform.openai.com/" target="_blank" rel="noopener">前往 →</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Anthropic</strong></td>
+                            <td>Claude 3.5/4</td>
+                            <td>新用户 $5 赠金</td>
+                            <td>编程和长文本最强</td>
+                            <td><a href="https://console.anthropic.com/" target="_blank" rel="noopener">前往 →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section-cta" style="margin-top:40px;">
+                <p class="cta-text">社群内有详细的 API 配置教程和最佳实践分享</p>
+                <a href="index.html#pricing" class="btn btn-primary">加入社群 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 免费资源大厅 ========== -->
+    <section id="tutorials" class="section">
+        <div class="container">
+            <h2 class="section-title">📚 免费资源大厅</h2>
+            <p class="section-subtitle">全网优质 OpenClaw 教程与资源，精心挑选 · 收录 55+ 篇</p>
+            <div class="filter-container" id="filter-container"></div>
+            <div class="grid resources-grid" id="resource-grid"></div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="section cta-section">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title">🚀 开始你的 AI 赚钱之旅</h2>
+            <p class="section-subtitle">加入社群，获取完整的技能安装教程、API 配置指南和变现 SOP</p>
+            <a href="index.html#pricing" class="btn btn-primary btn-lg">加入社群 ¥199/年 →</a>
+        </div>
+    </section>
+
+    <!-- ========== 页脚 ========== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" class="footer-logo" width="32" height="32"></picture>
+                        <span>openclaw小龙虾</span>
+                    </div>
+                    <p class="footer-desc">中文领先的 AI 赚钱教育平台。<br>用数据说话，用实战验证。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>站内导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="cases.html">赚钱案例</a></li>
+                        <li><a href="guides.html">学习指南</a></li>
+                        <li><a href="resources.html">资源中心</a></li>
+                        <li><a href="services.html">专业服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关平台</h4>
+                    <ul>
+                        <li><a href="https://docs.openclaw.ai" target="_blank">OpenClaw 官方文档</a></li>
+                        <li><a href="https://clawhub.com" target="_blank">ClawHub 技能市场</a></li>
+                        <li><a href="https://trustmrr.com/special-category/openclaw" target="_blank">TrustMRR 数据</a></li>
+                        <li><a href="#" target="_blank">知识星球：AI掘金者联盟</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>域名：xiaolongxia.vip</li>
+                        <li>微信：扫码联系客服</li>
+                        <li><a href="index.html#pricing">加入社群 ¥199/年</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 openclaw小龙虾 (xiaolongxia.vip) · AI 玩赚平台 · 用数据说话的赚钱教育社区</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="返回顶部">↑</button>
+
+    <script src="skills-data.js"></script>
+    <script src="resources.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

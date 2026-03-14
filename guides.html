@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习指南 - openclaw小龙虾 | 实战教程 + 国产AI生态 + 术语速查</title>
+    <meta name="description" content="OpenClaw 实战教程、国产AI Agent生态对比、赚钱术语速查。从零开始学会用 OpenClaw 赚钱，手把手教程持续更新中。">
+    <meta name="keywords" content="openclaw教程,openclaw配置,DeepSeek配置,国产AI Agent,LobsterAI,Kimi Claw,openclaw学习,AI赚钱教程,Skill开发,ClawHub,免费AI API">
+    <meta name="author" content="openclaw小龙虾">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xiaolongxia.vip/guides.html">
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta property="og:image" content="https://xiaolongxia.vip/logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xiaolongxia.vip/guides.html">
+    <meta property="og:title" content="学习指南 - openclaw小龙虾 | 实战教程 + 国产AI生态 + 术语速查">
+    <meta property="og:description" content="OpenClaw 实战教程、国产AI Agent生态对比、赚钱术语速查。从零开始学会用 OpenClaw 赚钱。">
+    <meta property="og:site_name" content="openclaw小龙虾">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="学习指南 - openclaw小龙虾 | 实战教程 + 国产AI生态 + 术语速查">
+    <meta name="twitter:description" content="OpenClaw 实战教程、国产AI Agent生态对比、赚钱术语速查。从零开始学会用 OpenClaw 赚钱。">
+
+    <!-- JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://xiaolongxia.vip/" },
+            { "@type": "ListItem", "position": 2, "name": "学习指南", "item": "https://xiaolongxia.vip/guides.html" }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "OpenClaw 是什么？",
+                "acceptedAnswer": { "@type": "Answer", "text": "OpenClaw 是一个开源的本地化 AI 智能体平台，用户无需编程即可创建和部署 AI 助理，并连接 Telegram、Discord、微信、飞书等工具。它是目前全球最受欢迎的开源 AI Agent 框架之一。" }
+            },
+            {
+                "@type": "Question",
+                "name": "OpenClaw 怎么赚钱？有哪些赛道？",
+                "acceptedAnswer": { "@type": "Answer", "text": "159 个项目30天总收入超过 $389,000。6大赛道：托管部署、安装服务、模板/Wrapper、培训教育、技能市场、SaaS 产品。每个赛道都有成功案例可参考。" }
+            },
+            {
+                "@type": "Question",
+                "name": "没有技术基础能用 OpenClaw 赚钱吗？",
+                "acceptedAnswer": { "@type": "Answer", "text": "完全可以。安装服务和培训教育赛道技术要求最低。零基础用户可以从安装服务入手，学习操作后逐步进阶到其他赛道。" }
+            },
+            {
+                "@type": "Question",
+                "name": "小龙虾玩赚社群适合什么人？",
+                "acceptedAnswer": { "@type": "Answer", "text": "适合想用AI赚钱的所有人：大学生、自由职业者、程序员、创业者、传统行业转型者。无论有无技术基础，都能找到适合自己的赛道。" }
+            },
+            {
+                "@type": "Question",
+                "name": "社群加入后能获得什么？值 ¥199 吗？",
+                "acceptedAnswer": { "@type": "Answer", "text": "社群权益包括：每周赚钱案例拆解直播、独家盈利数据周报、1v1赛道咨询、学员互助交流群、新手启动资源包、远程安装服务8折。仅一次安装服务折扣就能省回大部分会费。" }
+            },
+            {
+                "@type": "Question",
+                "name": "OpenClaw 和国内类似产品有什么区别？",
+                "acceptedAnswer": { "@type": "Answer", "text": "OpenClaw 是全球最大的开源 AI Agent 框架，生态最完善、社区最活跃。国内产品如 LobsterAI、Kimi Claw 等各有特色，但 OpenClaw 的赚钱生态（Skills市场、托管部署等）目前最成熟。" }
+            },
+            {
+                "@type": "Question",
+                "name": "什么是 MRR？排行榜上的数据怎么看？",
+                "acceptedAnswer": { "@type": "Answer", "text": "MRR 是 Monthly Recurring Revenue（月经常性收入），代表每月可预期的稳定收入。排行榜数据来自 TrustMRR.com 公开验证，是衡量项目盈利能力的核心指标。" }
+            },
+            {
+                "@type": "Question",
+                "name": "如何开始用 OpenClaw 赚钱？",
+                "acceptedAnswer": { "@type": "Answer", "text": "四步走：1) 浏览赚钱案例了解赛道 → 2) 利用学习指南上手 → 3) 研究成功案例确定模式 → 4) 加入社群获取 SOP 和持续支持。" }
+            },
+            {
+                "@type": "Question",
+                "name": "在中国使用 OpenClaw 需要翻墙吗？",
+                "acceptedAnswer": { "@type": "Answer", "text": "OpenClaw 本身不需要翻墙。搭配国产模型（如 DeepSeek、通义千问等）可以完全在国内网络环境下使用。部分海外 AI 模型（如 OpenAI）需要代理，但有大量国产替代方案。" }
+            },
+            {
+                "@type": "Question",
+                "name": "兼职做能赚到钱吗？每天需要多少时间？",
+                "acceptedAnswer": { "@type": "Answer", "text": "完全可以兼职做。安装服务每单1-2小时，模板开发利用业余时间即可。很多社群成员是兼职起步，每天投入1-2小时，月收入 ¥3,000-8,000 不等。" }
+            },
+            {
+                "@type": "Question",
+                "name": "和其他 AI 赚钱课程有什么区别？",
+                "acceptedAnswer": { "@type": "Answer", "text": "我们不是卖课程，而是提供一个持续更新的赚钱生态。区别在于：数据驱动（所有案例有 TrustMRR 验证数据）、实战导向（不讲理论讲操作）、社群支持（不是买完课就散）、持续更新（每周新案例新数据）。" }
+            },
+            {
+                "@type": "Question",
+                "name": "退款政策是什么？",
+                "acceptedAnswer": { "@type": "Answer", "text": "我们提供 7 天无理由退款保障。加入社群后如果觉得不适合，7 天内全额退款，无需任何理由。" }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 页面加载遮罩 -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-content">
+            <picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" width="64" height="64"></picture>
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- ========== 导航栏 ========== -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" class="logo-img" width="32" height="32"></picture> openclaw小龙虾</a>
+            <ul class="nav-links">
+                <li><a href="cases.html">赚钱案例</a></li>
+                <li><a href="guides.html" class="nav-active">学习指南</a></li>
+                <li><a href="resources.html">资源中心</a></li>
+                <li><a href="services.html">专业服务</a></li>
+                <li><a href="index.html#pricing" class="nav-cta-link">加入社群</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="切换深色模式">🌙</button>
+        </div>
+    </nav>
+
+    <main role="main">
+        <!-- ========== Page Hero ========== -->
+        <section class="page-hero">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="面包屑导航">
+                    <a href="index.html">首页</a> <span>/</span> <span>学习指南</span>
+                </nav>
+                <h1>📝 学习指南</h1>
+                <p>实战教程、国产AI生态对比、术语速查，从零开始上手 OpenClaw</p>
+            </div>
+        </section>
+
+        <!-- ========== 实战教程 ========== -->
+        <section id="guides" class="section">
+            <div class="container">
+                <h2 class="section-title">📚 实战教程</h2>
+                <p class="section-subtitle">从零开始，手把手带你上手 OpenClaw 赚钱</p>
+
+                <div class="guide-card reveal">
+                    <span class="guide-tag" style="background:#ff4757;color:#fff;">🔥 热门</span>
+                    <h3>OpenClaw + DeepSeek 国产配置指南</h3>
+                    <p>用最强国产推理模型 DeepSeek 驱动你的 OpenClaw Agent。从注册账号到配置 JSON，每一步都有截图说明。</p>
+                    <div class="guide-steps">
+                        <span>操作步骤</span>
+                        <ul>
+                            <li>注册 DeepSeek 开放平台</li>
+                            <li>在 OpenClaw 配置文件中设置</li>
+                            <li>JSON 配置示例</li>
+                            <li>常见报错排查</li>
+                            <li>V3 vs R1 选择建议</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">⏱ 预计 15 分钟 | 🎯 零基础友好</div>
+                </div>
+
+                <div class="guide-card reveal">
+                    <span class="guide-tag" style="background:#3742fa;color:#fff;">📱 必看</span>
+                    <h3>国内 IM 全接入指南：微信/企微/飞书/钉钉</h3>
+                    <p>一篇搞定所有国内主流通讯工具的 OpenClaw 接入。</p>
+                    <div class="guide-steps">
+                        <span>操作步骤</span>
+                        <ul>
+                            <li>飞书 Bot 接入</li>
+                            <li>钉钉机器人</li>
+                            <li>企业微信 AppFlow</li>
+                            <li>微信个人号方案</li>
+                            <li>四平台对比表</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">⏱ 预计 30 分钟 | 🎯 按需选择</div>
+                </div>
+
+                <div class="guide-card reveal">
+                    <span class="guide-tag" style="background:#ffa502;color:#fff;">💰 赚钱</span>
+                    <h3>Skill 开发 → 上架 ClawHub → 赚钱完整指南</h3>
+                    <p>OpenClaw 技能市场赚钱的完整闭环。</p>
+                    <div class="guide-steps">
+                        <span>操作步骤</span>
+                        <ul>
+                            <li>SKILL.md 结构</li>
+                            <li>创建到本地测试</li>
+                            <li>调用外部 API</li>
+                            <li>clawhub CLI 发布</li>
+                            <li>定价策略</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">⏱ 预计 45 分钟 | 🎯 需要基础编程</div>
+                </div>
+
+                <div class="guide-card reveal">
+                    <span class="guide-tag" style="background:#e74c3c;color:#fff;">🛡️ 安全</span>
+                    <h3>OpenClaw 安全避坑指南</h3>
+                    <p>341 个恶意 ClawHub 技能事件敲响警钟。</p>
+                    <div class="guide-steps">
+                        <span>操作步骤</span>
+                        <ul>
+                            <li>ClawHavoc 事件详解</li>
+                            <li>识别恶意 Skills</li>
+                            <li>API Key 安全</li>
+                            <li>Docker 沙箱</li>
+                            <li>权限最小化</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">⏱ 预计 20 分钟 | 🎯 所有用户必读</div>
+                </div>
+
+                <div class="guide-card reveal">
+                    <span class="guide-tag" style="background:#2ed573;color:#fff;">🆓 省钱</span>
+                    <h3>免费 AI API 完全指南：零成本运行 OpenClaw</h3>
+                    <p>25+ 家 AI API 厂商对比。</p>
+                    <div class="guide-steps">
+                        <span>操作步骤</span>
+                        <ul>
+                            <li>国产模型免费额度对比</li>
+                            <li>海外模型免费 Tier</li>
+                            <li>各模型配置方法</li>
+                            <li>按场景选模型</li>
+                            <li>Token 费用计算器</li>
+                        </ul>
+                    </div>
+                    <div class="guide-meta">⏱ 预计 15 分钟 | 🎯 零成本启动</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 国产 AI Agent 生态 ========== -->
+        <section id="alternatives" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">🇨🇳 国产 AI Agent 生态</h2>
+                <p class="section-subtitle">除了 OpenClaw，国内还有这些优秀的 AI Agent 平台</p>
+
+                <div class="alt-grid">
+                    <div class="alt-card alt-featured reveal">
+                        <span class="alt-badge">🔥 最受关注</span>
+                        <h3>LobsterAI（龙虾AI）</h3>
+                        <p><strong>网易有道</strong> — 中国首个100%开源AI Agent产品。支持5000+ OpenClaw Skills，可通过钉钉/飞书/企微/QQ远程控制。</p>
+                        <div class="alt-tags">
+                            <span class="alt-tag">开源</span>
+                            <span class="alt-tag">桌面端</span>
+                            <span class="alt-tag">多IM</span>
+                            <span class="alt-tag">本地数据</span>
+                        </div>
+                        <a href="https://lobster.youdao.com" target="_blank" class="btn btn-primary btn-small">了解详情 →</a>
+                    </div>
+
+                    <div class="alt-card reveal">
+                        <h3>Kimi Claw</h3>
+                        <p><strong>月之暗面</strong> — 浏览器原生OpenClaw。一键云端部署，K2.5模型驱动。</p>
+                        <div class="alt-tags">
+                            <span class="alt-tag">云端</span>
+                            <span class="alt-tag">一键部署</span>
+                            <span class="alt-tag">免安装</span>
+                        </div>
+                        <a href="https://kimi.com/claw" target="_blank" class="btn btn-secondary btn-small">了解详情 →</a>
+                    </div>
+
+                    <div class="alt-card reveal">
+                        <h3>HappyCapy</h3>
+                        <p><strong>原Trickle团队</strong> — 浏览器里的OpenClaw替代品。云端安全沙箱，150+AI模型。</p>
+                        <div class="alt-tags">
+                            <span class="alt-tag">浏览器</span>
+                            <span class="alt-tag">150+模型</span>
+                            <span class="alt-tag">沙箱</span>
+                        </div>
+                        <a href="https://happycapy.com" target="_blank" class="btn btn-secondary btn-small">了解详情 →</a>
+                    </div>
+
+                    <div class="alt-card reveal">
+                        <h3>Coze（扣子）</h3>
+                        <p><strong>字节跳动</strong> — 可视化工作流AI Agent平台。</p>
+                        <div class="alt-tags">
+                            <span class="alt-tag">可视化</span>
+                            <span class="alt-tag">低代码</span>
+                            <span class="alt-tag">字节生态</span>
+                        </div>
+                        <a href="https://www.coze.cn" target="_blank" class="btn btn-secondary btn-small">了解详情 →</a>
+                    </div>
+
+                    <div class="alt-card reveal">
+                        <h3>腾讯元器</h3>
+                        <p><strong>腾讯</strong> — 零门槛AI应用构建平台。</p>
+                        <div class="alt-tags">
+                            <span class="alt-tag">微信生态</span>
+                            <span class="alt-tag">零门槛</span>
+                            <span class="alt-tag">企业级</span>
+                        </div>
+                        <a href="https://yuanqi.tencent.com" target="_blank" class="btn btn-secondary btn-small">了解详情 →</a>
+                    </div>
+
+                    <div class="alt-card reveal">
+                        <h3>OpenClaw CN（中国社区版）</h3>
+                        <p><strong>Gitee社区</strong> — 适配国内网络环境。</p>
+                        <div class="alt-tags">
+                            <span class="alt-tag">Gitee</span>
+                            <span class="alt-tag">国内优化</span>
+                            <span class="alt-tag">国产模型</span>
+                        </div>
+                        <a href="https://gitee.com/openclaw-cn" target="_blank" class="btn btn-secondary btn-small">了解详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 术语速查 ========== -->
+        <section id="glossary" class="section">
+            <div class="container">
+                <h2 class="section-title">📖 术语速查</h2>
+                <p class="section-subtitle">OpenClaw 赚钱生态的核心概念，一看就懂</p>
+
+                <div class="glossary-grid">
+                    <dl class="glossary-list">
+                        <div class="glossary-item reveal">
+                            <dt>MRR（Monthly Recurring Revenue）</dt>
+                            <dd>月经常性收入。指每月可预期的稳定订阅收入，是衡量 SaaS 和订阅制业务健康度的核心指标。例如你有 10 个客户每月付 $50，你的 MRR 就是 $500。</dd>
+                        </div>
+                        <div class="glossary-item reveal">
+                            <dt>ARR（Annual Recurring Revenue）</dt>
+                            <dd>年经常性收入。等于 MRR × 12，代表年化的订阅收入规模。投资人和排行榜常用这个指标衡量项目的整体规模。</dd>
+                        </div>
+                        <div class="glossary-item reveal">
+                            <dt>Wrapper</dt>
+                            <dd>包装器/封装工具。指在 OpenClaw 基础上添加特定功能或界面的二次封装产品。比如把 OpenClaw 封装成一个"AI客服系统"或"AI写作助手"，就是典型的 Wrapper 赛道。</dd>
+                        </div>
+                        <div class="glossary-item reveal">
+                            <dt>Agent</dt>
+                            <dd>AI 智能体。能够自主执行任务的 AI 程序，可以理解指令、调用工具、完成复杂工作流。OpenClaw 就是一个 Agent 框架，帮你快速构建自己的 AI Agent。</dd>
+                        </div>
+                        <div class="glossary-item reveal">
+                            <dt>Skill</dt>
+                            <dd>技能/插件。OpenClaw 的扩展能力单元，每个 Skill 实现一个特定功能（如搜索网页、发送邮件、操作数据库等）。可以在 ClawHub 技能市场上发布和售卖。</dd>
+                        </div>
+                        <div class="glossary-item reveal">
+                            <dt>SaaS（Software as a Service）</dt>
+                            <dd>软件即服务。用户按月/年付费使用的云端软件产品。基于 OpenClaw 构建 SaaS 产品是最高天花板的赛道，可以实现持续的被动收入。</dd>
+                        </div>
+                        <div class="glossary-item reveal">
+                            <dt>BYOK（Bring Your Own Key）</dt>
+                            <dd>自带密钥模式。用户使用自己的 AI 模型 API Key 来运行服务，服务提供商不承担 AI 调用成本。这是很多 OpenClaw 托管部署服务的常见模式。</dd>
+                        </div>
+                        <div class="glossary-item reveal">
+                            <dt>一键部署</dt>
+                            <dd>通过自动化脚本或平台，让用户一键完成 OpenClaw 的安装和配置。这是托管部署赛道的核心卖点，也是 Kimi Claw 等云端产品的主要优势。</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 完整 FAQ ========== -->
+        <section id="faq-full" class="section bg-light" aria-label="完整常见问题">
+            <div class="container">
+                <h2 class="section-title">❓ 完整常见问题</h2>
+                <p class="section-subtitle">关于 OpenClaw 赚钱和小龙虾社群的全部问题解答</p>
+
+                <div class="faq-container" id="faq-container">
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">OpenClaw 是什么？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>OpenClaw 是一个<strong>开源的本地化 AI 智能体平台</strong>，用户无需编程即可创建和部署 AI 助理，并连接 Telegram、Discord、微信、飞书等工具。它是目前全球最受欢迎的开源 AI Agent 框架之一，在 GitHub 上拥有超过 140,000 颗 Star。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">OpenClaw 怎么赚钱？有哪些赛道？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>根据 <cite>TrustMRR.com</cite> 的公开数据，159 个 OpenClaw 项目30天总收入超过 <strong>$389,000</strong>。主要分为6大赛道：</p>
+                                <ul>
+                                    <li><strong>托管部署</strong> — 一键云端部署服务，按月收费</li>
+                                    <li><strong>安装服务</strong> — 为客户远程或线下安装</li>
+                                    <li><strong>模板/Wrapper</strong> — 开发封装工具出售</li>
+                                    <li><strong>培训教育</strong> — 教别人用 OpenClaw 赚钱</li>
+                                    <li><strong>技能市场</strong> — 开发/销售 AI 技能插件</li>
+                                    <li><strong>SaaS 产品</strong> — 基于 OpenClaw 构建独立产品</li>
+                                </ul>
+                                <p><a href="cases.html">查看完整排行榜和赛道分析 →</a></p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">没有技术基础能用 OpenClaw 赚钱吗？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p><strong>完全可以。</strong>安装服务赛道和培训教育赛道对技术要求最低。零基础用户可以从安装服务入手，学习操作后逐步进阶到其他赛道。社群提供完整的 SOP 文档和视频教程，跟着做就行。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">小龙虾玩赚社群适合什么人？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>适合所有想用 AI 赚钱的人，包括但不限于：</p>
+                                <ul>
+                                    <li><strong>大学生</strong> — 利用课余时间做安装服务，赚取生活费</li>
+                                    <li><strong>自由职业者</strong> — 拓展 AI 服务业务线</li>
+                                    <li><strong>程序员</strong> — 开发 Skill 插件或 SaaS 产品</li>
+                                    <li><strong>创业者</strong> — 寻找 AI 赛道的创业机会</li>
+                                    <li><strong>传统行业转型者</strong> — 用 AI 工具提升业务效率</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">社群加入后能获得什么？值 ¥199 吗？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>社群权益包括：</p>
+                                <ul>
+                                    <li>每周赚钱案例拆解直播</li>
+                                    <li>独家盈利数据周报</li>
+                                    <li>入群即享 1v1 赛道咨询</li>
+                                    <li>学员互助交流群</li>
+                                    <li>新手启动资源包</li>
+                                    <li>远程安装服务 8 折</li>
+                                </ul>
+                                <p>仅远程安装服务 8 折优惠一项，单次就能省回大部分会费。更关键的是，你能获得经过验证的赚钱方法和同行人脉。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">OpenClaw 和国内类似产品有什么区别？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>OpenClaw 是全球最大的开源 AI Agent 框架，生态最完善、社区最活跃。国内产品各有特色：</p>
+                                <ul>
+                                    <li><strong>LobsterAI</strong> — 中国首个100%开源，兼容 OpenClaw Skills</li>
+                                    <li><strong>Kimi Claw</strong> — 云端一键部署，无需安装</li>
+                                    <li><strong>Coze（扣子）</strong> — 可视化工作流，低代码</li>
+                                </ul>
+                                <p>但 OpenClaw 的赚钱生态（Skills市场、托管部署等）目前最成熟，变现路径最清晰。详见 <a href="#alternatives">国产AI生态对比</a>。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">什么是 MRR？排行榜上的数据怎么看？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p><strong>MRR</strong> 是 Monthly Recurring Revenue（月经常性收入），代表每月可预期的稳定收入。这是衡量订阅制业务健康度的核心指标。</p>
+                                <p>排行榜数据来自 <cite>TrustMRR.com</cite> 公开验证，展示了各项目的月收入、累计收入和增长趋势。数字越高代表盈利能力越强。更多术语请查看 <a href="#glossary">术语速查</a>。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">如何开始用 OpenClaw 赚钱？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>四步走：</p>
+                                <ol>
+                                    <li>浏览 <a href="cases.html">赚钱案例</a> 了解各赛道</li>
+                                    <li>利用 <a href="#guides">学习指南</a> 上手 OpenClaw</li>
+                                    <li>研究成功案例，确定适合自己的赚钱模式</li>
+                                    <li>加入社群，获取 SOP 文档和持续支持</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">在中国使用 OpenClaw 需要翻墙吗？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p><strong>OpenClaw 本身不需要翻墙。</strong>搭配国产模型（如 DeepSeek、通义千问、智谱GLM等）可以完全在国内网络环境下使用。</p>
+                                <p>部分海外 AI 模型（如 OpenAI、Claude）需要代理访问，但国内有大量免费或低成本的替代方案。详见 <a href="#guides">免费 AI API 完全指南</a>。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">兼职做能赚到钱吗？每天需要多少时间？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p><strong>完全可以兼职做。</strong>不同赛道的时间投入不同：</p>
+                                <ul>
+                                    <li><strong>安装服务</strong> — 每单 1-2 小时，灵活接单</li>
+                                    <li><strong>模板开发</strong> — 利用业余时间开发，上架后持续被动收入</li>
+                                    <li><strong>托管部署</strong> — 前期搭建后，维护时间很少</li>
+                                </ul>
+                                <p>很多社群成员是兼职起步，每天投入 1-2 小时，月收入 ¥3,000-8,000 不等。关键是选对赛道并持续执行。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">和其他 AI 赚钱课程有什么区别？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>我们不是卖课程，而是提供一个<strong>持续更新的赚钱生态</strong>。核心区别：</p>
+                                <ul>
+                                    <li><strong>数据驱动</strong> — 所有案例有 TrustMRR 验证数据，不是臆造的</li>
+                                    <li><strong>实战导向</strong> — 不讲理论讲操作，每个教程都有具体步骤</li>
+                                    <li><strong>社群支持</strong> — 不是买完课就散，而是持续的社群互助</li>
+                                    <li><strong>持续更新</strong> — 每周新案例新数据，不是一次性内容</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="faq-question" itemprop="name">退款政策是什么？</button>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>我们提供 <strong>7 天无理由退款保障</strong>。加入社群后如果觉得不适合，7 天内全额退款，无需任何理由。我们对内容质量有信心，所以敢承诺无条件退款。</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CTA ========== -->
+        <section class="section" style="text-align:center;">
+            <div class="container">
+                <h2 class="section-title">🦞 准备好开始赚钱了吗？</h2>
+                <p class="section-subtitle">加入小龙虾玩赚社群，获取完整教程、SOP 文档和持续支持</p>
+                <div class="hero-actions" style="justify-content:center;">
+                    <a href="index.html#pricing" class="btn btn-gold btn-large">立刻抢位加入 ¥199/年</a>
+                    <a href="cases.html" class="btn btn-primary btn-large">先看赚钱案例 →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== Footer ========== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <picture><source srcset="logo.webp" type="image/webp"><img src="logo.png" alt="小龙虾" class="footer-logo" width="32" height="32"></picture>
+                        <span>openclaw小龙虾</span>
+                    </div>
+                    <p class="footer-desc">中文领先的 AI 赚钱教育平台。<br>用数据说话，用实战验证。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>站内导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="cases.html">赚钱案例</a></li>
+                        <li><a href="guides.html">学习指南</a></li>
+                        <li><a href="resources.html">资源中心</a></li>
+                        <li><a href="services.html">专业服务</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关平台</h4>
+                    <ul>
+                        <li><a href="https://docs.openclaw.ai" target="_blank">OpenClaw 官方文档</a></li>
+                        <li><a href="https://clawhub.com" target="_blank">ClawHub 技能市场</a></li>
+                        <li><a href="https://trustmrr.com/special-category/openclaw" target="_blank">TrustMRR 数据</a></li>
+                        <li><a href="#" target="_blank">知识星球：AI掘金者联盟</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>域名：xiaolongxia.vip</li>
+                        <li>微信：扫码联系客服</li>
+                        <li><a href="index.html#pricing">加入社群 ¥199/年</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 openclaw小龙虾 (xiaolongxia.vip) · AI 玩赚平台 · 用数据说话的赚钱教育社区</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="返回顶部">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

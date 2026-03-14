@@ -2805,3 +2805,241 @@ body {
         padding: 20px;
     }
 }
+
+/* ============================================================
+   Multi-page: Page Hero, Breadcrumb, Link Cards, Process, etc.
+   ============================================================ */
+
+/* Page Hero (sub-pages) */
+.page-hero {
+    background: var(--bg-dark);
+    color: #fff;
+    padding: 120px 0 48px;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.page-hero p {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.breadcrumb span {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Link Cards (index.html feature navigation) */
+.link-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.link-card:hover {
+    border-color: var(--primary-red);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.link-arrow {
+    display: block;
+    margin-top: auto;
+    padding-top: 12px;
+    font-weight: 700;
+    color: var(--primary-red);
+    font-size: 0.9rem;
+}
+
+/* Nav CTA Link */
+.nav-cta-link {
+    background: var(--gradient-gold) !important;
+    color: var(--bg-dark) !important;
+    padding: 6px 16px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    transition: var(--transition);
+}
+
+.nav-cta-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Service Card Large (services page) */
+.service-card-large {
+    text-align: left;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    backdrop-filter: none;
+}
+
+.service-card-large:hover {
+    background: var(--bg-white);
+    border-color: var(--primary-red);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card-large h3 {
+    color: var(--text-dark);
+}
+
+.service-card-large p {
+    color: var(--text-gray);
+}
+
+.service-includes {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.service-includes li {
+    padding: 6px 0;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-includes li:last-child {
+    border-bottom: none;
+}
+
+/* Process Steps (services page) */
+.process-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.process-step {
+    text-align: center;
+    flex: 1;
+    min-width: 160px;
+    max-width: 220px;
+}
+
+.process-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.process-step h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.process-step p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+.process-arrow {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+    font-weight: 700;
+}
+
+/* Dark mode overrides for new components */
+[data-theme="dark"] .page-hero {
+    background: var(--bg-dark);
+}
+
+[data-theme="dark"] .service-card-large {
+    background: var(--bg-dark-card);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .service-card-large:hover {
+    background: var(--bg-dark-card);
+    border-color: var(--primary-red);
+}
+
+[data-theme="dark"] .service-card-large h3 {
+    color: var(--text-light);
+}
+
+[data-theme="dark"] .service-card-large p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .service-includes li {
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .link-card {
+    color: var(--text-light);
+}
+
+[data-theme="dark"] .process-step p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .process-arrow {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive for new components */
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 100px 0 32px;
+    }
+
+    .process-grid {
+        flex-direction: column;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+    }
+
+    .process-step {
+        max-width: 100%;
+    }
+}
