@@ -31,11 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================================
     // 2. 滚动动画 (Intersection Observer)
     // ============================================================
-    const revealElements = document.querySelectorAll(
-        '.card, .section-title, .section-subtitle, .community-box, .dashboard-card, .profit-card, .track-card, .testimonial-card, .pricing-card, .calculator-box'
+    const autoRevealElements = document.querySelectorAll(
+        '.card, .section-title, .section-subtitle, .community-box, .dashboard-card, .profit-card, .track-card, .calculator-box'
     );
 
-    revealElements.forEach(el => el.classList.add('reveal'));
+    autoRevealElements.forEach(el => el.classList.add('reveal'));
+
+    // 同时收集 HTML 中已手动标记 reveal 的元素（如 guide-card, alt-card, glossary-item 等）
+    const revealElements = document.querySelectorAll('.reveal');
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
