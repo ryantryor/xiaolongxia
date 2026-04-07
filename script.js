@@ -187,19 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 profitGrid.appendChild(card);
 
-                // Insert community CTA every 6 cards
-                if ((index + 1) % 6 === 0 && index < filtered.length - 1) {
-                    const ctaCard = document.createElement('div');
-                    ctaCard.className = 'profit-card reveal active';
-                    ctaCard.style.cssText = 'background:linear-gradient(135deg,rgba(230,57,70,0.04),rgba(255,215,0,0.08)); border:2px solid var(--primary-red); text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center;';
-                    ctaCard.innerHTML = `
-                        <div style="font-size:2.5rem; margin-bottom:16px;">🔥</div>
-                        <h3 style="color:var(--primary-red);">想复制他们的成功？</h3>
-                        <p class="profit-card-desc">加入社群获取每个项目的详细运营拆解和启动 SOP</p>
-                        <a href="#pricing" class="btn btn-primary" style="margin-top:8px;">加入玩赚社群 →</a>
-                    `;
-                    profitGrid.appendChild(ctaCard);
-                }
             });
         };
 
@@ -376,34 +363,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 resourceGrid.insertAdjacentHTML('beforeend', cardHtml);
 
-                if ((index + 1) % 5 === 0) {
-                    const adCardHtml = `
-                        <div class="card resource-card ad-card reveal active" style="text-align:center;">
-                            <span class="resource-source" style="color: var(--primary-red)">
-                                🌟 社群专属
-                            </span>
-                            <h3>想看更深度的赚钱教程？</h3>
-                            <p>加入玩赚社群，获取独家盈利案例拆解和实操 SOP。</p>
-                            <a href="#pricing" class="btn btn-primary" style="margin-top:auto;">加入社群 ¥199/年</a>
-                        </div>
-                    `;
-                    resourceGrid.insertAdjacentHTML('beforeend', adCardHtml);
-                }
             });
 
-            if (filtered.length > 0 && filtered.length < 5) {
-                const communityAdHtml = `
-                    <div class="card resource-card ad-card reveal active" style="text-align:center;">
-                        <span class="resource-source" style="color: var(--primary-yellow)">
-                            💬 加入我们
-                        </span>
-                        <h3>发现更多赚钱玩法</h3>
-                        <p>加入 OpenClaw 小龙虾社群，获取内部独家赚钱技巧分享。</p>
-                        <a href="#pricing" class="btn btn-yellow" style="margin-top:auto;">加入玩赚社群</a>
-                    </div>
-                `;
-                resourceGrid.insertAdjacentHTML('beforeend', communityAdHtml);
-            }
         };
 
         const handleFilterClick = (e) => {
@@ -435,39 +396,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ============================================================
-    // 11. 浮动底部 CTA 栏
-    // ============================================================
-    const floatingCta = document.getElementById('floating-cta');
-    const heroSection = document.querySelector('.hero');
-
-    if (floatingCta && heroSection) {
-        const showFloatingCta = () => {
-            const heroBottom = heroSection.getBoundingClientRect().bottom;
-            const pricingSection = document.getElementById('pricing');
-            const contactSection = document.getElementById('contact');
-
-            // 在 pricing 和 contact 区域隐藏浮动栏（避免与页面内 CTA 重叠）
-            let inPricingOrContact = false;
-            if (pricingSection) {
-                const pr = pricingSection.getBoundingClientRect();
-                if (pr.top < window.innerHeight && pr.bottom > 0) inPricingOrContact = true;
-            }
-            if (contactSection) {
-                const cr = contactSection.getBoundingClientRect();
-                if (cr.top < window.innerHeight && cr.bottom > 0) inPricingOrContact = true;
-            }
-
-            if (heroBottom < 0 && !inPricingOrContact) {
-                floatingCta.classList.add('visible');
-            } else {
-                floatingCta.classList.remove('visible');
-            }
-        };
-
-        window.addEventListener('scroll', showFloatingCta, { passive: true });
-        showFloatingCta();
-    }
 
     // ============================================================
     // 12. 技能库渲染
@@ -512,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p>${s.safetyNote}</p>
                     </div>
                     <div class="skill-money">
-                        <span class="skill-section-label">💰 赚钱思路</span>
+                        <span class="skill-section-label">💡 应用思路</span>
                         <p>${s.moneyTip}</p>
                     </div>
                     <div class="skill-footer">

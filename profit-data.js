@@ -1,13 +1,13 @@
 // ============================================================
 // 盈利项目数据 — 来自 TrustMRR.com 公开验证数据
-// 6大赚钱赛道分类
+// 6大应用赛道分类
 // ============================================================
 
 const trackMeta = {
     hosting:   { icon: '🏠', label: '托管部署', color: '#6366f1', desc: '一键部署 OpenClaw，按月收费' },
     install:   { icon: '🔧', label: '安装服务', color: '#10b981', desc: '为客户远程或线下安装配置' },
     template:  { icon: '📦', label: '模板/Wrapper', color: '#f97316', desc: '开发模板或封装工具出售' },
-    training:  { icon: '🎓', label: '培训教育', color: '#ec4899', desc: '教别人使用 OpenClaw 赚钱' },
+    training:  { icon: '🎓', label: '培训教育', color: '#ec4899', desc: '教别人使用 OpenClaw' },
     marketplace: { icon: '🛒', label: '技能市场', color: '#8b5cf6', desc: '开发/销售 AI 技能插件' },
     saas:      { icon: '🤖', label: 'SaaS 产品', color: '#0ea5e9', desc: '基于 OpenClaw 构建 SaaS' },
 };
@@ -65,7 +65,7 @@ const profitProjects = [
     },
     {
         name: 'AI MONEY GROUP',
-        desc: '教人用 AI 赚钱。帮客户搭建 OpenClaw 并将 AI 员工（AI Personas）卖给企业主。',
+        desc: '帮客户搭建 OpenClaw 并将 AI 员工（AI Personas）部署给企业主。',
         revenue30d: 18000,
         mrr: 13000,
         totalRevenue: 288000,
